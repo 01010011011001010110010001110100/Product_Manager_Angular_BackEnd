@@ -18,7 +18,7 @@
     "detail": {
       "type": "text"
     },
-    "typePaymentID": {
+    "typePayment": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::type-payment.type-payment"
@@ -55,10 +55,16 @@
       "relation": "oneToOne",
       "target": "plugin::users-permissions.user"
     },
-    "typeCurrencyID": {
+    "typeCurrency": {
       "type": "relation",
       "relation": "oneToOne",
       "target": "api::type-currency.type-currency"
+    },
+    "typeCurrencyId": {
+      "type": "string"
+    },
+    "typePaymentId": {
+      "type": "string"
     }
   }
 }

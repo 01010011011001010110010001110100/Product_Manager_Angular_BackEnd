@@ -405,14 +405,16 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     regularPrice: Schema.Attribute.Decimal;
-    typeCurrencyID: Schema.Attribute.Relation<
+    typeCurrency: Schema.Attribute.Relation<
       'oneToOne',
       'api::type-currency.type-currency'
     >;
-    typePaymentID: Schema.Attribute.Relation<
+    typeCurrencyId: Schema.Attribute.String;
+    typePayment: Schema.Attribute.Relation<
       'oneToOne',
       'api::type-payment.type-payment'
     >;
+    typePaymentId: Schema.Attribute.String;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
