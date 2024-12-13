@@ -1,0 +1,21 @@
+{
+  "kind": "collectionType",
+  "collectionName": "type_currencies",
+  "info": {
+    "singularName": "type-currency",
+    "pluralName": "type-currencies",
+    "displayName": "TypeCurrencies"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "name": {
+      "type": "string"
+    },
+    "ISO2": {
+      "type": "string"
+    }
+  }
+}
