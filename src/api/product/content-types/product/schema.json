@@ -44,16 +44,11 @@
     "createdOn": {
       "type": "datetime"
     },
-    "updateOn": {
+    "updatedOn": {
       "type": "datetime"
     },
     "deletedOn": {
       "type": "datetime"
-    },
-    "createdByUserID": {
-      "type": "relation",
-      "relation": "oneToOne",
-      "target": "plugin::users-permissions.user"
     },
     "typeCurrency": {
       "type": "relation",
