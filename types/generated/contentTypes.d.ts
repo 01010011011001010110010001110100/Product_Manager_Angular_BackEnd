@@ -384,10 +384,6 @@ export interface ApiClientClient extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    createdOn: Schema.Attribute.DateTime;
-    deletedOn: Schema.Attribute.DateTime;
-    isActive: Schema.Attribute.Boolean;
-    isDeleted: Schema.Attribute.Boolean;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -397,10 +393,11 @@ export interface ApiClientClient extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String;
     phoneNumber: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    statusFlags: Schema.Attribute.Component<'entity.status', false>;
+    timeStamps: Schema.Attribute.Component<'audit.time-stamps', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    updatedOn: Schema.Attribute.DateTime;
   };
 }
 
@@ -420,13 +417,9 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     createdAt: Schema.Attribute.DateTime;
     createdBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    createdOn: Schema.Attribute.DateTime;
-    deletedOn: Schema.Attribute.DateTime;
     detail: Schema.Attribute.Text;
     implementationCost: Schema.Attribute.Decimal;
     instalationCost: Schema.Attribute.Decimal;
-    isActive: Schema.Attribute.Boolean;
-    isDeleted: Schema.Attribute.Boolean;
     locale: Schema.Attribute.String & Schema.Attribute.Private;
     localizations: Schema.Attribute.Relation<
       'oneToMany',
@@ -436,6 +429,8 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
     regularPrice: Schema.Attribute.Decimal;
+    statusFlags: Schema.Attribute.Component<'entity.status', false>;
+    timeStamps: Schema.Attribute.Component<'audit.time-stamps', false>;
     typeCurrency: Schema.Attribute.Relation<
       'oneToOne',
       'api::type-currency.type-currency'
@@ -449,7 +444,6 @@ export interface ApiProductProduct extends Struct.CollectionTypeSchema {
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
-    updatedOn: Schema.Attribute.DateTime;
   };
 }
 
@@ -457,6 +451,7 @@ export interface ApiTypeCurrencyTypeCurrency
   extends Struct.CollectionTypeSchema {
   collectionName: 'type_currencies';
   info: {
+    description: '';
     displayName: 'TypeCurrencies';
     pluralName: 'type-currencies';
     singularName: 'type-currency';
@@ -477,6 +472,8 @@ export interface ApiTypeCurrencyTypeCurrency
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    statusFlags: Schema.Attribute.Component<'entity.status', true>;
+    timeStamps: Schema.Attribute.Component<'audit.time-stamps', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;
@@ -506,6 +503,8 @@ export interface ApiTypePaymentTypePayment extends Struct.CollectionTypeSchema {
       Schema.Attribute.Private;
     name: Schema.Attribute.String;
     publishedAt: Schema.Attribute.DateTime;
+    statusFlags: Schema.Attribute.Component<'entity.status', false>;
+    timeStamps: Schema.Attribute.Component<'audit.time-stamps', false>;
     updatedAt: Schema.Attribute.DateTime;
     updatedBy: Schema.Attribute.Relation<'oneToOne', 'admin::user'> &
       Schema.Attribute.Private;

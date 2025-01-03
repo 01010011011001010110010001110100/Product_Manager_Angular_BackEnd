@@ -1,0 +1,19 @@
+{
+  "collectionName": "components_audit_time_stamps",
+  "info": {
+    "displayName": "time-stamps",
+    "icon": "eye"
+  },
+  "options": {},
+  "attributes": {
+    "createdOn": {
+      "type": "datetime"
+    },
+    "updatedOn": {
+      "type": "datetime"
+    },
+    "deletedOn": {
+      "type": "datetime"
+    }
+  }
+}

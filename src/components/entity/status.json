@@ -1,0 +1,17 @@
+{
+  "collectionName": "components_entity_statuses",
+  "info": {
+    "displayName": "StatusFlags",
+    "icon": "puzzle",
+    "description": ""
+  },
+  "options": {},
+  "attributes": {
+    "isActive": {
+      "type": "boolean"
+    },
+    "isDeleted": {
+      "type": "boolean"
+    }
+  }
+}

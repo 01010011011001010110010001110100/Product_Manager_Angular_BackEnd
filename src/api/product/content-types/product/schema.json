@@ -35,21 +35,6 @@
     "advancePrice": {
       "type": "decimal"
     },
-    "isActive": {
-      "type": "boolean"
-    },
-    "isDeleted": {
-      "type": "boolean"
-    },
-    "createdOn": {
-      "type": "datetime"
-    },
-    "updatedOn": {
-      "type": "datetime"
-    },
-    "deletedOn": {
-      "type": "datetime"
-    },
     "typeCurrency": {
       "type": "relation",
       "relation": "oneToOne",
@@ -60,6 +45,16 @@
     },
     "typePaymentId": {
       "type": "string"
+    },
+    "timeStamps": {
+      "type": "component",
+      "repeatable": false,
+      "component": "audit.time-stamps"
+    },
+    "statusFlags": {
+      "type": "component",
+      "repeatable": false,
+      "component": "entity.status"
     }
   }
 }

@@ -4,7 +4,8 @@
   "info": {
     "singularName": "type-currency",
     "pluralName": "type-currencies",
-    "displayName": "TypeCurrencies"
+    "displayName": "TypeCurrencies",
+    "description": ""
   },
   "options": {
     "draftAndPublish": true
@@ -16,6 +17,16 @@
     },
     "ISO2": {
       "type": "string"
+    },
+    "timeStamps": {
+      "type": "component",
+      "repeatable": false,
+      "component": "audit.time-stamps"
+    },
+    "statusFlags": {
+      "type": "component",
+      "repeatable": true,
+      "component": "entity.status"
     }
   }
 }

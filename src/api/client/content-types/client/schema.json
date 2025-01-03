@@ -18,20 +18,15 @@
     "phoneNumber": {
       "type": "string"
     },
-    "isActive": {
-      "type": "boolean"
+    "timeStamps": {
+      "type": "component",
+      "repeatable": false,
+      "component": "audit.time-stamps"
     },
-    "isDeleted": {
-      "type": "boolean"
-    },
-    "createdOn": {
-      "type": "datetime"
-    },
-    "deletedOn": {
-      "type": "datetime"
-    },
-    "updatedOn": {
-      "type": "datetime"
+    "statusFlags": {
+      "type": "component",
+      "repeatable": false,
+      "component": "entity.status"
     }
   }
 }

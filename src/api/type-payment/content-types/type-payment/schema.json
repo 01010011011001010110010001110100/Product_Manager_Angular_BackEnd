@@ -14,6 +14,16 @@
   "attributes": {
     "name": {
       "type": "string"
+    },
+    "timeStamps": {
+      "type": "component",
+      "repeatable": false,
+      "component": "audit.time-stamps"
+    },
+    "statusFlags": {
+      "type": "component",
+      "repeatable": false,
+      "component": "entity.status"
     }
   }
 }
